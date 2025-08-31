@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TGM LLC — SMS Alerts Opt-In</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root{--ink:#111;--muted:#555;--rim:#ddd;--brand:#0a7cff}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);
+         max-width:820px;margin:40px auto;padding:0 16px;line-height:1.55}
+    header{display:flex;align-items:center;gap:16px;margin:6px 0 18px}
+    .logo{display:block;height:56px;width:auto}
+    h1{font-size:clamp(20px,2.8vw,28px);margin:0}
+    .intro{color:var(--muted);margin:8px 0 18px}
+    form{border:1px solid var(--rim);border-radius:12px;padding:20px}
+    label{display:block;margin:12px 0 6px;font-weight:600}
+    input[type="text"],input[type="tel"],input[type="email"]{
+      width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+    .consent{margin:12px 0;display:flex;gap:10px;align-items:flex-start}
+    .consent input{margin-top:3px}
+    .fine{font-size:12px;color:var(--muted)}
+    .actions{margin-top:16px}
+    button{padding:10px 16px;border:0;border-radius:8px;background:var(--brand);color:#fff;cursor:pointer}
+    nav{margin-top:16px;font-size:14px}
+    nav a{margin-right:12px}
+    .card{background:#fff;border:1px solid var(--rim);border-radius:12px;padding:22px}
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.png" srcset="logo@2x.png 2x" alt="TGM LLC logo">
+    <h1>TGM LLC — SMS Alerts Opt-In</h1>
+  </header>
+
+  <p class="intro">Opt in to receive operational text updates from TGM LLC (e.g., job scheduling, arrival times, status updates). No marketing texts.</p>
+
+  <form method="post" action="/opt-in" class="card">
+    <label for="name">Full name</label>
+    <input id="name" name="name" type="text" required>
+
+    <label for="phone">Mobile number (US)</label>
+    <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+1 555 555 5555" required>
+
+    <div class="consent">
+      <input id="agree" name="agree" type="checkbox" required>
+      <label for="agree">
+        I agree to receive operational SMS from TGM LLC at the number provided.
+        Msg &amp; data rates may apply. Msg frequency varies. Reply <strong>STOP</strong> to stop, <strong>HELP</strong> for help.
+      </label>
+    </div>
+
+    <div class="fine">
+      By submitting, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.
+    </div>
+
+    <div class="actions">
+      <button type="submit">Opt In</button>
+    </div>
+  </form>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+
+  <section class="fine" aria-label="required disclosures">
+    <p><strong>Disclosures:</strong> Standard carrier rates may apply. Message frequency varies by activity.
+    You can opt out any time by replying STOP. For help, reply HELP or email <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a>.</p>
+  </section>
+</body>
+</html>
