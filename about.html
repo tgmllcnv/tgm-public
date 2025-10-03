@@ -3,16 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About – TGM LLC</title>
-  <link rel="icon" href="/logo.png">
-  <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;max-width:900px;margin:0 auto;padding:24px} nav a{color:#2563eb}</style>
+  <title>About — TGM LLC</title>
+  <link rel="icon" href="logo.png" />
+  <style>
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#0b0b0b; color:#e5e7eb; }
+    a { color:#60a5fa; }
+    .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+    header, footer { background:#0b0b0b; border-bottom:1px solid #1f2937; }
+    header .bar, footer .bar { display:flex; align-items:center; gap:14px; padding:14px 0; }
+    nav { margin-left:auto; display:flex; gap:14px; flex-wrap:wrap; }
+    .grid { display:grid; gap:18px; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); margin:18px 0; }
+    .card { border:1px solid #1f2937; border-radius:12px; padding:16px; background:#111827; }
+  </style>
 </head>
 <body>
-  <h1>About TGM LLC</h1>
-  <nav style="margin:20px 0">
-    <a href="/index.html">Home</a> · <a href="/services.html">Services</a> · <a href="/contact.html">Contact</a> · <a href="/sms-opt-in.html">SMS Opt-In</a> · <a href="/sms-program.html">SMS Program</a>
-  </nav>
-  <p>TGM LLC is a Nevada business focused on coordinating jobs and field service work. We keep customers and contractors informed with clear schedules and status updates.</p>
-  <p>We value privacy and only send <strong>operational</strong> SMS to people who explicitly opt in. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+  <header>
+    <div class="wrap bar">
+      <img src="logo.png" alt="TGM LLC" width="32" height="32" />
+      <strong>TGM LLC</strong>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="work-request.html">Request Work</a>
+        <a href="sms-opt-in.html">SMS Opt-In</a>
+        <a href="sms-program.html">SMS Program</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>About TGM LLC</h1>
+    <p>TGM LLC coordinates jobs and services for customers, staff, and contractors. We keep everyone aligned with
+       concise, operational SMS updates (no marketing). Typical messages: scheduling, arrival windows, and completion confirmations.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a><br>
+           Phone: <a href="tel:+17753056645">+1-775-305-6645</a></p>
+      </div>
+      <div class="card">
+        <h3>Compliance</h3>
+        <p>Read our <a href="sms-program.html">SMS Program</a>, <a href="terms.html">Terms</a>, and <a href="privacy.html">Privacy</a>.
+           Reply <b>STOP</b> to opt out, <b>HELP</b> for help.</p>
+      </div>
+      <div class="card">
+        <h3>Get Started</h3>
+        <p><a href="work-request.html">Request Work</a> or <a href="sms-opt-in.html">Opt-In to SMS</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap bar">
+      <small>© <script>document.write(new Date().getFullYear())</script> TGM LLC</small>
+    </div>
+  </footer>
 </body>
 </html>
+
