@@ -3,53 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Request Work — TGM LLC</title>
+  <title>Request Work • TGM LLC</title>
   <link rel="icon" href="logo.png" />
   <style>
-    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#0b0b0b; color:#e5e7eb; }
-    a { color:#60a5fa; }
-    .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
-    header, footer { background:#0b0b0b; border-bottom:1px solid #1f2937; }
-    header .bar, footer .bar { display:flex; align-items:center; gap:14px; padding:14px 0; }
-    nav { margin-left:auto; display:flex; gap:14px; flex-wrap:wrap; }
-    h1 { margin: 18px 0; }
-    .note { color:#9ca3af; }
-    .frame { width:100%; height:900px; border:1px solid #1f2937; border-radius:12px; background:#111827; }
-    .card { border:1px solid #1f2937; border-radius:12px; padding:16px; background:#111827; }
+    :root { color-scheme: dark; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0b0b0b; color:#eaeaea; }
+    header, main, footer { max-width: 960px; margin: 0 auto; padding: 16px; }
+    nav a { color:#8ab4f8; margin-right:16px; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .card { background:#121212; border:1px solid #2a2a2a; border-radius:10px; padding:20px; }
+    h1 { margin:16px 0 12px; }
+    label { display:block; margin-top:14px; font-weight:600; }
+    input, textarea { width:100%; background:#0f0f0f; color:#eaeaea; border:1px solid #2a2a2a; border-radius:8px; padding:10px; }
+    textarea { min-height:120px; resize:vertical; }
+    .row { display:grid; gap:12px; grid-template-columns: 1fr 1fr; }
+    .row > div { min-width:0; }
+    .btn { display:inline-block; margin-top:16px; padding:10px 16px; border-radius:10px; border:1px solid #2a2a2a; background:#2563eb; color:#fff; cursor:pointer; }
+    .fine { font-size:.9rem; color:#bdbdbd; margin-top:12px; }
+    .muted { color:#a8a8a8; font-size:.95rem; }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap bar">
-      <img src="logo.png" alt="TGM LLC" width="32" height="32" />
-      <strong>TGM LLC</strong>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="sms-opt-in.html">SMS Opt-In</a>
-        <a href="sms-program.html">SMS Program</a>
-        <a href="about.html">About</a>
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/work-request.html">Request Work</a>
+      <a href="/sms-opt-in.html">SMS Opt-In</a>
+      <a href="/sms-program.html">SMS Program</a>
+      <a href="/about.html">About</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <h1>Request Work</h1>
+    <p class="muted">
+      Use this form to request service. We’ll confirm and keep you updated via operational SMS (no marketing).
+      Reply <strong>STOP</strong> to opt out; <strong>HELP</strong> for help. Standard carrier rates may apply.
+    </p>
   </header>
 
-  <main class="wrap">
-    <h1>Request Work</h1>
-    <p class="note">Use this form to request service. We’ll confirm and keep you updated via operational SMS (no marketing). Reply <b>STOP</b> to opt out, <b>HELP</b> for help. Standard carrier rates may apply.</p>
+  <main>
+    <form class="card" action="mailto:support@tgmllcnv.com" method="post" enctype="text/plain">
+      <div class="row">
+        <div>
+          <label for="name">Full name</label>
+          <input id="name" name="Name" required />
+        </div>
+        <div>
+          <label for="phone">Mobile number (US)</label>
+          <input id="phone" name="Mobile" inputmode="tel" placeholder="+1 775 555 1234" required />
+        </div>
+      </div>
 
-    <!-- Replace the src below with your Google Form embed URL -->
-    <iframe class="frame" src="YOUR_GOOGLE_FORM_EMBED_URL" title="Work Request Form" loading="lazy"></iframe>
+      <div class="row">
+        <div>
+          <label for="address">Service address (optional)</label>
+          <input id="address" name="Service Address" />
+        </div>
+        <div>
+          <label for="email">Email (optional)</label>
+          <input id="email" name="Email" type="email" />
+        </div>
+      </div>
 
-    <div class="card" style="margin:18px 0">
-      <strong>Need help?</strong> Email <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a> or call <a href="tel:+17753056645">+1-775-305-6645</a>.
-    </div>
+      <label for="desc">Describe the work</label>
+      <textarea id="desc" name="Work Description" required></textarea>
+
+      <button class="btn" type="submit">Send Request</button>
+
+      <p class="fine">
+        By submitting, you agree we may contact you about this request. SMS consent is separate from any agreement.
+        For SMS-only details (frequency, STOP/HELP, fees), see the <a href="/sms-program.html">SMS Program</a>.
+      </p>
+    </form>
   </main>
 
   <footer>
-    <div class="wrap bar">
-      <small>© <script>document.write(new Date().getFullYear())</script> TGM LLC</small>
-    </div>
+    <p class="muted">© 2025 TGM LLC • <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a> • +1-775-305-6645</p>
   </footer>
 </body>
 </html>
+
