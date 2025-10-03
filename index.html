@@ -3,77 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TGM LLC — Public Site</title>
-  <meta name="description" content="TGM LLC provides operational SMS updates for jobs and services. No marketing texts." />
+  <title>TGM LLC — Operational SMS & Service Requests</title>
+  <meta name="description" content="TGM LLC coordinates jobs and services and provides operational SMS updates. No marketing texts." />
   <link rel="icon" href="logo.png" />
+  <meta property="og:title" content="TGM LLC — Jobs & Service Coordination" />
+  <meta property="og:description" content="Operational updates, not marketing. Request work or opt in for SMS alerts." />
+  <meta property="og:url" content="https://www.tgmllcnv.com/" />
+  <meta property="og:image" content="https://www.tgmllcnv.com/logo.png" />
   <style>
-    :root { color-scheme: light; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; line-height: 1.5; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
-    header, footer { background:#f7f7f7; border-bottom:1px solid #eee; }
-    header .wrap, footer .wrap { display:flex; align-items:center; gap:16px; }
-    nav { margin-left:auto; display:flex; gap:16px; }
-    nav a, .btn { color:#2563eb; text-decoration:none; font-weight:600; }
-    .btn { display:inline-block; background:#2563eb; color:#fff; padding:10px 14px; border-radius:8px; }
+    :root { color-scheme: dark light; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#0b0b0b; color:#e5e7eb; }
+    a { color:#60a5fa; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrap { max-width: 1080px; margin:0 auto; padding: 0 20px; }
+    header { position:sticky; top:0; background:#0b0b0b; border-bottom:1px solid #1f2937; z-index:10; }
+    header .bar { display:flex; align-items:center; gap:16px; padding:14px 0; }
+    nav { margin-left:auto; display:flex; gap:18px; flex-wrap:wrap; }
+    .btn { display:inline-block; background:#2563eb; color:#fff; padding:12px 18px; border-radius:10px; font-weight:600; }
+    .btn.alt { background:transparent; border:1px solid #374151; }
     .btn:hover { filter:brightness(0.95); }
-    h1 { margin: 0; font-size: 1.5rem; }
-    .hero { padding: 40px 0; }
-    .card { border:1px solid #e5e7eb; border-radius:10px; padding:16px; margin:16px 0; }
-    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
-    small, .fine { color:#6b7280; }
-    footer { border-top:1px solid #eee; border-bottom:none; margin-top:40px; }
+    .hero { min-height: 68vh; display:grid; place-items:center; text-align:center; background:radial-gradient(800px 400px at 50% -10%, #111827 0%, #0b0b0b 60%); }
+    .logo { width:120px; height:120px; object-fit:contain; filter:drop-shadow(0 0 12px rgba(96,165,250,.2)); }
+    h1 { font-size: clamp(28px, 4vw, 48px); margin:16px 0 6px; }
+    .tag { color:#9ca3af; font-size:1rem; max-width:740px; margin:0 auto 28px; }
+    .cta { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .grid { display:grid; gap:18px; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); margin:42px 0; }
+    .card { border:1px solid #1f2937; border-radius:14px; padding:18px; background:linear-gradient(180deg,#0f172a,#0b0b0b); }
+    h2,h3 { color:#fff; }
+    .fine { color:#9ca3af; }
+    footer { border-top:1px solid #1f2937; margin-top:40px; }
+    footer .bar { display:flex; align-items:center; gap:14px; padding:18px 0; }
+    .spacer { height:20px; }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <img src="logo.png" alt="TGM LLC" width="32" height="32" />
-      <h1>TGM LLC</h1>
+    <div class="wrap bar">
+      <img src="logo.png" alt="TGM LLC" width="36" height="36" />
+      <strong>TGM LLC</strong>
       <nav aria-label="Main">
-        <a href="sms-opt-in.html">SMS Alerts Opt-In</a>
+        <a href="work-request.html">Request Work</a>
+        <a href="sms-opt-in.html">SMS Opt-In</a>
         <a href="sms-program.html">SMS Program</a>
+        <a href="about.html">About</a>
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
     <section class="hero">
-      <h2>Operational updates, not marketing.</h2>
-      <p>We send job and service status updates by SMS (e.g., scheduling, arrival windows, and completion notices). 
-         Messaging is one-to-one and event-driven. No marketing texts.</p>
-      <p><a class="btn" href="sms-opt-in.html">Opt in to SMS updates</a></p>
-      <p class="fine">Reply STOP to opt out. Reply HELP for help. Standard carrier rates may apply.</p>
+      <div class="wrap">
+        <img class="logo" src="logo@2x.png" alt="TGM logo" />
+        <h1>Operational updates. No marketing.</h1>
+        <p class="tag">We coordinate jobs and services and keep you informed with one-to-one, event-driven SMS:
+          scheduling, arrival windows, and completion notices. Reply <b>STOP</b> to opt out, <b>HELP</b> for help.
+          Standard carrier rates may apply.</p>
+        <div class="cta">
+          <a class="btn" href="work-request.html">Request Work</a>
+          <a class="btn alt" href="sms-opt-in.html">Opt-In to SMS</a>
+        </div>
+      </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h3>What we send</h3>
-        <ul>
-          <li>Job scheduling &amp; arrival windows</li>
-          <li>On-site/technician status</li>
-          <li>Completion confirmations</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Support</h3>
-        <p>Email: <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a><br/>
-           Phone: <a href="tel:+17753056645">+1-775-305-6645</a></p>
-      </div>
-      <div class="card">
-        <h3>Compliance</h3>
-        <p>See our <a href="sms-program.html">SMS Program</a>, <a href="terms.html">Terms</a>, and <a href="privacy.html">Privacy</a>.</p>
+    <section class="wrap">
+      <div class="grid">
+        <div class="card">
+          <h3>What we send</h3>
+          <ul>
+            <li>Job scheduling &amp; arrival windows</li>
+            <li>On-site status updates</li>
+            <li>Completion confirmations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Support</h3>
+          <p>Email: <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a><br>
+             Phone: <a href="tel:+17753056645">+1-775-305-6645</a></p>
+          <p class="fine">We do not send marketing texts.</p>
+        </div>
+        <div class="card">
+          <h3>Compliance</h3>
+          <p>See our <a href="sms-program.html">SMS Program</a>, <a href="terms.html">Terms</a>, and <a href="privacy.html">Privacy</a>.
+            The SMS opt-in requires explicit consent and a mobile number.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
+    <div class="wrap bar">
       <small>© <span id="y"></span> TGM LLC • Nevada, USA • <a href="mailto:support@tgmllcnv.com">support@tgmllcnv.com</a></small>
-      <nav aria-label="Footer" style="margin-left:auto">
+      <span class="spacer"></span>
+      <nav aria-label="Footer" style="margin-left:auto;display:flex;gap:14px">
+        <a href="work-request.html">Request Work</a>
         <a href="sms-opt-in.html">Opt-In</a>
-        <a href="sms-program.html">SMS Program</a>
+        <a href="sms-program.html">Program</a>
+        <a href="about.html">About</a>
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
       </nav>
@@ -82,4 +110,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
